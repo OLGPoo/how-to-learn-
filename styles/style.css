@@ -9,6 +9,9 @@
   min-height:600px;
   max-height:756px;
   display:flex;
+  justify-content:flex-start;
+  align-content:center;
+  align-items:center;
   background-color:#f2f2f2;
   position:relative;
   overflow:hidden;
@@ -22,7 +25,7 @@
   opacity:0.5;
 }
 .logo {
-width:183px;
+width:228px;
 height:32px;
 }
 .logo_place_header {
@@ -33,13 +36,14 @@ left:64px;
 .header__title {
 width:730px;
 margin-left:64px;
-margin-bottom:auto;
-margin-top:auto;
+margin-bottom:0;
+margin-top:0;
 font-size:102px;
 line-height:96px;
 font-weight:bold;
-font-style:600px;
+font-weight:600px;
 z-index:5;
+margin:0;
 }
 .header__subtitle {
 width:388px;
@@ -51,20 +55,18 @@ font-size:18px;
 line-height:25px;
 font-weight:normal;
 }
-.header__subtitle-link {
+.header__subtitile-link {
 text-decoration:none;
 color:#2f80ed;
 }
-.header__subtitle-link:hover {
-  text-decoration:none;
-}
-.header__main-illustrtion {
+.header__main-illustration {
   width:765px;
   height:608px;
   position:absolute;
   bottom:0;
   right:0;
   z-index:2;
+  object-fit:contain;
 }
 /* ниже мы привели пример двух селекторов, чтобы вы вспомнили запись элемента */
 .header__square-pic {
@@ -81,11 +83,13 @@ color:#2f80ed;
   flex-direction:column;
 }
 .two-columns {
+  width:80%;
+  min-width:784px;
   display:flex;
   justify-content:space-between;
-  width:80%;
-  margin:0 auto;
-  padding-top:100px;
+  margin-top:100px;
+  min-height:200px;
+  margin-bottom:100px;
 }
 .two-columns__brief {
   width:175px;
@@ -93,6 +97,7 @@ color:#2f80ed;
   line-height:1.2;
   font-weight:normal;
   color:#2f80ed;
+  margin:0;
 }
 .two-columns__main-text {
 width:80%;
@@ -110,10 +115,12 @@ margin:0;
   line-height:34px;
 }
 .two-columns__paragraph:last-child {
-  margin-bottom:0;
+  margin:0;
+  line-height:34px;
+  font-size:24px;
 }
 .two-columns__paragraph {
-  width:80%;
+  line-height:34px;
   font-size:24px;
   font-weight:normal;
   margin:0 0 30px 0;
@@ -121,7 +128,7 @@ margin:0;
 .digits {
   display:flex;
   flex-direction:column;
-  padding:100px;
+  align-items:center;
 }
 .section-title {
 margin:0 auto;
@@ -130,7 +137,7 @@ line-height: 1.15;
 font-weight:600;
 }
 .section-subtitle {
-  margin:0 auto;
+  margin-top:20px;
   font-size:24px;
   line-height:34px;
   font-weight:normal;
@@ -146,18 +153,21 @@ font-weight:600;
   font-size:24px;
   line-height:1.15;
   font-weight:bold;
+  margin:0;
 }
 .table__text {
   font-size:18px;
   line-height:1.2;
   font-weight:normal;
+  margin-bottom:0;
+  margin-top:20px;
 }
 .table__cell {
   width:250px;
   margin-top:60px;
 }
 .feynman {
-  height:890px;
+  min-height:890px;
   display:flex;
   background-color:#f2f2f2;
   flex-direction:column;
@@ -203,21 +213,19 @@ font-weight:600;
   margin-top:80px;
 }
 .kaufman {
-  height:790px;
   display:flex;
   background-color:#1f1f1f;
   overflow:hidden;
   flex-direction:column;
   position:relative;
   justify-content:center;
-  
+  z-index:1;
 }
 .table_theme_dark {
   width:1100px;
   display:flex;
   flex-wrap:wrap;
   justify-content:space-between;
-  z-index:3;
   margin: 0 auto 90px;
 }
 .section-title_theme_dark {
@@ -226,7 +234,6 @@ font-weight:600;
   font-size:60px;
   line-height:69px;
   font-weight:bold;
-  z-index:56;
 }
 .section-subtitle_theme_dark {
   color:#ffffff;
@@ -241,7 +248,9 @@ font-weight:600;
   right:-210px;
   width:877px;
   height:877px;
+  background-image:url(../images/kaufman-triangle.svg);
   z-index:-1;
+  background-size:cover;
 }
 .table__text_theme_dark {
 font-size:18px;
@@ -256,21 +265,26 @@ font-weight:normal;
 }
 .footer__columns {
   display:flex;
+  justify-content:space-between;
+  flex-direction:row;
   width:90%;
   margin:60px auto 40px;
-  position:relative;
 }
 .footer__column-heading {
   font-size:18px;
   line-height:30px;
   font-weight:bold;
   margin-top:0;
+  margin-bottom:0;
 }
 .footer__column-links {
   list-style-type:none;
   padding-left:0;
+  margin-top:20px;
+  margin-bottom:16px;
+  
 }
-.footer__column-links-items {
+.footer__column-links {
   font-size:18px;
   line-height:30px;
   font-weight:normal;
@@ -283,35 +297,45 @@ font-weight:normal;
   text-decoration:none;
 }
 .logo_place_footer {
-  position:absolute;
-  top:0;
-  left:0;
+  display:flex;
+  justify-content:center;
 }
 .footer__logo-image {
-  width:183px;
-  height:35px;
+  width:228px;
+  height:32px;
 }
-.footer__column_content_copiright {
+.footer__column_content_copyright {
   flex-basis:711px;
   position:relative;
+  display:flex;
+  flex-direction:column;
+  justify-content:space-between;
+
 }
 .footer__author {
-  position:absolute;
-  bottom:18px;
-  left:0;
+  display:flex;
+  flex-direction:column;
+  margin-bottom:18px;
+  margin-top:18px;
   font-size:18px;
   line-height:25px;
   font-weight:normal;
 }
 .footer__column_content_info {
-margin-left:0;
+display:flex;
+flex-direction:column;
+margin:0;
+padding:0;
+
 }
 .footer__column_content_social {
+  display:flex;
+  flex-direction:column;
   margin-right:0;
-  position:absolute;
   right:0;
 }
-.footer__social-icons {
+.footer__social-icon {
   width:16px;
   height:16px;
+  margin-right:10px;
 }
