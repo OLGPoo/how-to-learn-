@@ -63,7 +63,7 @@
   font-weight: normal;
 }
 
-.header__subtitle-link {
+.header__link {
   text-decoration: none;
   color: #2f80ed;
 }
@@ -204,7 +204,7 @@
 
 .feynman__title {
   width: 648px;
-  margin: 100px auto;
+  margin: 0 auto;
   font-size: 120px;
   line-height: 1.15;
   font-weight: bold;
