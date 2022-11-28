@@ -5,9 +5,9 @@
   min-width: 784px;
   display: flex;
   justify-content: space-between;
-  margin-top: 100px;
   padding: 0;
 }
 .two-columns:last-child{
   margin-top: 0;
 }
+
